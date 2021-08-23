@@ -1,4 +1,6 @@
 import './App.css';
+import CartItems from './Components/CartItems';
+import CartTotal from './Components/CartTotal';
 import Header from './Components/Header';
 
 function App() {
@@ -7,12 +9,9 @@ function App() {
     <div className="App">
       <Header title ='Amazon Cart'/>
       <div className="App-main">
-        <div className="CartItems">
-          <h1>Shopping Cart</h1>
-        </div>
-        <div className="CartTotal">
-        
-        </div>
+        <CartItems />
+      
+        <CartTotal />
       </div>
     </div>
     </>
