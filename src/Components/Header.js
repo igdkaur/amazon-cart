@@ -1,10 +1,10 @@
 import React from 'react'
 import HeaderStyles from '../Styles/Header.css'
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <div className='header'>
-      Amazon Cart
+     <h1>{title}</h1>
     </div>
   )
 }
