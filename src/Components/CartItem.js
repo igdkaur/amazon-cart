@@ -1,7 +1,7 @@
 import React from 'react'
 import "../Styles/CartItem.css"
 
-const CartItem = () => {
+const CartItem = ({item}) => {
   return (
     <div className="CartItem">
       <div className="CartItem-image">
