@@ -5,18 +5,18 @@ const CartItem = ({item}) => {
   return (
     <div className="CartItem">
       <div className="CartItem-image">
-        <img src="https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:no-product-image.jpg,h_350,w_350/v1605270687/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/8976685629470.png" alt ="ipad" />
+        <img src={process.env.PUBLIC_URL + '/items/' + item.image }  alt ="ipad" />
       </div>
       <div className="CartItem-info">
         <div className="info-title">
-        <h2>Apple Ipad Pro</h2>
+        <h2>{item.title}</h2>
         </div>
         <div className="info-stock">
-          In Stock
+          {item.stock}
         </div>
         <div className="item-actions">
           <div className="item-quantity">
-            <select>
+            <select value = {item.quantity}>
               <option value="1">Qty:1</option>
               <option value="2">Qty:2</option>
               <option value="3">Qty:3</option>
@@ -29,7 +29,7 @@ const CartItem = ({item}) => {
         </div>
       </div>
       <div className="CartItem-price">
-        $900
+        ${item.price}
       </div>
       
     </div>
