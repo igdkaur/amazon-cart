@@ -8,7 +8,7 @@ import {useState} from 'react';
 
 function App() {
 
-  const [cartItems, SetCartItems ] =useState(data);
+  const [cartItems, setCartItems ] =useState(data);
  
 
   return (
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header title ='Amazon Cart'/>
       <div className="App-main">
-        <CartItems items={cartItems} />
+        <CartItems items={cartItems} setCartItems={setCartItems} />
       
         <CartTotal items={cartItems}/>
       </div>
