@@ -1,7 +1,7 @@
 import React from 'react'
 import "../Styles/CartItem.css"
 
-const CartItem = ({index, item, changeItemQuantity}) => {
+const CartItem = ({index, item, changeItemQuantity, deleteItem }) => {
   return (
     <div className="CartItem">
       <div className="CartItem-image">
@@ -24,7 +24,7 @@ const CartItem = ({index, item, changeItemQuantity}) => {
             </select>
           </div>
           <div className="item-actions-divider">|</div>
-          <div className="item-delete">
+          <div className="item-delete" onClick = {()=> deleteItem(index)}>
             Delete
           </div>
         </div>

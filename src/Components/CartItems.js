@@ -5,11 +5,18 @@ import CartItem from './CartItem'
 const CartItems = ({index, items, setCartItems}) => {
 
   const changeItemQuantity = (e,index) => {
-console.log(e.target.value)
   const newItems = [...items]
   newItems[index].quantity=e.target.value
   setCartItems(newItems);
   }
+
+  const deleteItem = (indexToDelete) => {
+    const newitems = items.filter((value, index) => {
+        return index !== indexToDelete
+    })
+     setCartItems(newitems)
+    }
+
   return (
     <div className="CartItems">
       <h1>Shopping Cart</h1>
@@ -22,6 +29,7 @@ console.log(e.target.value)
       item={item}
       key={index}
       changeItemQuantity={changeItemQuantity}
+      deleteItem={deleteItem}
 
       />
       ) }
